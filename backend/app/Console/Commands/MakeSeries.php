@@ -52,12 +52,16 @@ class MakeSeries extends Command
         if($this->isObjectCorrect($objectCommand)){
 
             // receive options
-            $options = $this->ask('Type in options and they will be added to every command that will execute, type "skip" to skip');
+            $options = $this->ask('Type in options and they will be added to every command that will execute, leave empty or type "exit" to quit script]', false);
+            if($options == "exit")
+                die();
             $testCommand = $objectCommand." ".$options;
 
             // check if options are valid
-            while($options != "skip" && !$this->areOptionsCorrect($testCommand)){
-                $options = $this->ask("Given options are invalid. Please type in correct command options or type \"exit\" to quit or \"skip\" to skip options");
+            while($options !== false && !$this->areOptionsCorrect($testCommand)){
+                $options = $this->ask("Given options are invalid. Please type in correct command options, leave empty or type \"exit\" to quit");
+                if($options == "exit")
+                    die();
                 $testCommand = $objectCommand." ".$options;
             }
 
@@ -70,7 +74,7 @@ class MakeSeries extends Command
                 if($name == "exit")
                     die();
 
-                if($options != "skip")
+                if($options != "")
                     echo shell_exec($objectCommand." ".$name." ".$options);
                 else
                     echo shell_exec($objectCommand." ".$name);
