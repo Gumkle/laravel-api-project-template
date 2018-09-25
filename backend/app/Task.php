@@ -16,13 +16,15 @@ class Task extends Model
         return $this->thread->project;
     }
 
-    //TODO make sure that related pivot key is set correctly
     public function users(){
-        return $this->belongsToMany('App\User', 'assigned_roles', 'user_id', 'object_id');
+        return $this->morphMany('App\AssignedRole', 'object');
     }
 
     public function logs(){
-        // TODO return all the logs related to $this
-//        return;
+        return $this->morphMany('App\Log', 'logged');
+    }
+
+    public function status(){
+        return $this->belongsTo('App\Status');
     }
 }

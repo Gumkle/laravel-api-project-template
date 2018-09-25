@@ -36,4 +36,8 @@ class User extends Authenticatable
     public function logs(){
         return $this->hasMany('App\Logs');
     }
+
+    public function assignations(){
+        return $this->hasMany('App\AssignedRole');
+    }
 }

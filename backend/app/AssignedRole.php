@@ -15,7 +15,6 @@ class AssignedRole extends Model
     }
 
     public function object(){
-        // todo read about and set polymorphic association to project, task and thread
-//        return $this->morphOne();
-    }
+        return $this->morphTo();
+}
 }

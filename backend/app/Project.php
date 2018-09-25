@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    //TODO make sure that related pivot key is set correctly
     public function users(){
-        return $this->belongsToMany('App\User', 'assigned_roles', 'user_id', 'object_id');
+        return $this->morphMany('App\AssignedRole', 'object');
     }
 
     public function threads(){
@@ -19,16 +18,14 @@ class Project extends Model
         return $this->belongsTo('App\Status');
     }
 
-    // TODO see if below solution is correct
     public function tasks(){
-        $tasks = $this->tasks;
-        return $tasks->map(function($item, $key){
+        $threads = $this->threads;
+        return $threads->map(function($item){
             return $item->tasks;
         });
     }
 
     public function logs(){
-        // TODO set the relation to get all logs pointing at $this
-//        return;
+        return $this->morphMany('App\Log', 'logged');
     }
 }

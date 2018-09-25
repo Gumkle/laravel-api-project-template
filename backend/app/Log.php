@@ -12,7 +12,6 @@ class Log extends Model
 
     public function object(){
 
-        // TODO set polymorphic relation to project, thread and task model
-//        return $this->morphOne('');
+        return $this->morphTo();
     }
 }
