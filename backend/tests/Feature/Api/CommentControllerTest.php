@@ -8,13 +8,41 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CommentControllerTest extends TestCase
 {
+    // TODO read something about DB tests
+    // TODO read something about API tests
+    // TODO do a lot of reading C:
     /**
-     * A basic test example.
-     *
-     * @return void
+     * Testing for proper execution of index method
      */
-    public function testExample()
-    {
-        $this->assertTrue(true);
+    public function testIndex(){
+
+    }
+
+    /**
+     * Testing for proper execution of store method
+     */
+    public function testStore(){
+
+    }
+
+    /**
+     * Testing for proper execution of show method
+     */
+    public function testShow(){
+
+    }
+
+    /**
+     * Testing for proper execution of update method
+     */
+    public function testUpdate(){
+
+    }
+
+    /**
+     * Testing for proper execution of destroy method
+     */
+    public function testDestroy(){
+
     }
 }
