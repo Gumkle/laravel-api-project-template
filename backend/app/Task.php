@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Task extends Model
 {
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
 
     public function thread(){
         return $this->belongsTo('App\Thread');
@@ -26,5 +29,9 @@ class Task extends Model
 
     public function status(){
         return $this->belongsTo('App\Status');
+    }
+
+    public function comments(){
+        return $this->morphMany('App\Comment', 'commentable');
     }
 }

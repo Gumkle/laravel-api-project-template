@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
             $table->string('description');
             $table->integer('thread_id');
             $table->integer('status_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

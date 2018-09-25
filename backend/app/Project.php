@@ -3,9 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Project extends Model
 {
+
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
+
     public function users(){
         return $this->morphMany('App\AssignedRole', 'object');
     }
@@ -27,5 +32,9 @@ class Project extends Model
 
     public function logs(){
         return $this->morphMany('App\Log', 'logged');
+    }
+
+    public function comments(){
+        return $this->morphMany('App\Comment', 'commentable');
     }
 }
