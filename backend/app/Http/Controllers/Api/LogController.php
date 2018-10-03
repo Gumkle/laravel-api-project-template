@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Local;
+namespace App\Http\Controllers\Api;
 
-use App\ObjectLog;
+use App\Log;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class ObjectLogController extends Controller
+class LogController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -14,16 +13,6 @@ class ObjectLogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
     {
         //
     }
@@ -42,21 +31,10 @@ class ObjectLogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\ObjectLog  $objectLog
+     * @param  \App\Log  $Log
      * @return \Illuminate\Http\Response
      */
-    public function show(ObjectLog $objectLog)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\ObjectLog  $objectLog
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ObjectLog $objectLog)
+    public function show(Log $Log)
     {
         //
     }
@@ -65,10 +43,10 @@ class ObjectLogController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ObjectLog  $objectLog
+     * @param  \App\Log  $Log
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ObjectLog $objectLog)
+    public function update(Request $request, Log $Log)
     {
         //
     }
@@ -76,10 +54,10 @@ class ObjectLogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ObjectLog  $objectLog
+     * @param  \App\Log  $Log
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ObjectLog $objectLog)
+    public function destroy(Log $Log)
     {
         //
     }

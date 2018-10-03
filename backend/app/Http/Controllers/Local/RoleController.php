@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Local;
 
 use App\Role;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class RoleController extends Controller
+class RoleController extends AdminController
 {
     /**
      * Display a listing of the resource.

@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('oauth/token', 'Auth\NewAccessTokenController@issueToken');
+Route::get('oauth/getclients', 'Api\GetToken');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

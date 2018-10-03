@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Message;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class MessageController extends Controller
+class MessageController extends ApiController
 {
     /**
      * Display a listing of the resource.

@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Local;
 
 use App\Message;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class MessageController extends Controller
+class MessageController extends AdminController
 {
     /**
      * Display a listing of the resource.

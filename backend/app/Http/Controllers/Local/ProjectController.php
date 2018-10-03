@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Local;
 
 use App\Project;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class ProjectController extends Controller
+class ProjectController extends  AdminController
 {
     /**
      * Display a listing of the resource.

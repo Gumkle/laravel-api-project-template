@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Project;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class ProjectController extends Controller
+class ProjectController extends ApiController
 {
     /**
      * Display a listing of the resource.

@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Local;
 
 use App\Task;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class TaskController extends Controller
+class TaskController extends AdminController
 {
     /**
      * Display a listing of the resource.
