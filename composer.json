@@ -1,0 +1,14 @@
+{
+    "name": "gumkle/laravel_api_template",
+    "description": "Template for creating new project with API and site-admin",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dawid dziedzic",
+            "email": "dziedzicdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
